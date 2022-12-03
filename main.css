@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url(reset.css);
+
+
+:root {
+    /* colors */
+    --clr-yellow: yellow;
+    --clr-green: green;
+    --clr-orange:  orange;
+  
+
+    /* fonts */
+    --ff-primary: 'Alata', sans-serif;
+    --ff-secondary: 'Josefin Sans', sans-serif;
+    --fw-300: 300;
+    --fw-400: 400;
+    /* font-size: 15px; */
+}
+
+/* typography */
+html {
+    /* 62.5% of 16px browser font size is 10px */
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    /* It returns default value of browser (16px) */
+    font-size: 1.6em;
+    min-height: 100%;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* typography end */
+
+body {
+    font-family: var(--ff-primary);
+    /*background-color: var(--clr-primary-bgr);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------------Mobile layout-------------------------*/
+/*
+* {
+    border: 2px solid green;
+}*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'article_text_rem_padding_rem'
+        'article_text_rem_padding_vw'
+        'article_text_vw_padding_vw';
+    min-width: 37.5rem;
+    gap: 6rem;
+}
+/*-----------------------------------------------*/
+.article_text_rem_padding_rem {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'title_rem_padding_rem'
+        'container_text_rem_padding_rem';
+    justify-items: center;
+    align-items: center;
+    border: 3px solid var(--clr-yellow);
+}
+
+.title_rem_padding_rem {
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    border: 3px solid var(--clr-green);
+}
+
+.container_text_rem_padding_rem {
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    border: 3px solid var(--clr-orange);
+}
+
+/*----------------------------------------------------*/
+.article_text_rem_padding_vw {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'title_rem_padding_vw'
+        'container_text_rem_padding_vw';
+    justify-items: center;
+    align-items: center;
+    border: 3px solid var(--clr-yellow);
+}
+
+.title_rem_padding_vw {
+    font-size: 2.5rem;
+    padding: 1vw;
+    border: 3px solid var(--clr-green);
+}
+
+.container_text_rem_padding_vw {
+    font-size: 1.75rem;
+    padding: 1vw;
+    border: 3px solid var(--clr-orange);
+}
+
+/*----------------------------------------------------------*/
+.article_text_vw_padding_vw {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'title_vw_padding_vw'
+        'container_text_vw_padding_vw';
+    justify-items: center;
+    align-items: center;
+    border: 3px solid var(--clr-yellow);
+}
+
+.title_vw_padding_vw {
+    font-size: 2vw;
+    padding: 1vw;
+    border: 3px solid var(--clr-green);
+}
+
+.container_text_vw_padding_vw {
+    font-size: 1.45vw;
+    padding: 1vw;
+    border: 3px solid var(--clr-orange);
+}
+
+/*----------------------------------------------------------*/
+.article_text_vw_padding_rem {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'title_vw_padding_rem'
+        'container_text_vw_padding_rem';
+    justify-items: center;
+    align-items: center;
+    border: 3px solid var(--clr-yellow);
+}
+
+.title_vw_padding_rem {
+    font-size: 2vw;
+    padding: 1.5rem;
+    border: 3px solid var(--clr-green);
+}
+
+.container_text_vw_padding_rem {
+    font-size: 1.45vw;
+    padding: 1.5rem;
+    border: 3px solid var(--clr-orange);
+}
+
+/* style 1st component - mobile */
+
+/*---------------------Desktop layout-------------------------*/
+@media screen and (min-width: 48rem) {
+    
+/* style 1st component - desktop */    
+   
+
+    
+}
+/*------------------grid area names---------------------------*/
+.article_container_rem_padding_rem {
+    grid-area: article_container_rem_padding_rem;
+}
+
+.title_rem_padding_rem {
+    grid-area: title_rem_padding_rem;
+}
+
+.article_text_rem_padding_rem {
+    grid-area: article_text_rem_padding_rem;
+}
+
+.article_container_rem_padding_vw {
+    grid-area: article_container_rem_padding_vw;
+}
+
+.title_rem_padding_vw {
+    grid-area: title_rem_padding_vw;
+}
+
+.article_text_rem_padding_vw {
+    grid-area: article_text_rem_padding_vw;
+}
+
+.article_container_vw_padding_vw {
+    grid-area: article_container_vw_padding_vw;
+}
+
+.title_vw_padding_vw {
+    grid-area: title_vw_padding_vw;
+}
+
+.article_text_vw_padding_vw {
+    grid-area: article_text_vw_padding_vw;
+}
